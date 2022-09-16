@@ -1,0 +1,74 @@
+
+/* 슬라이드배너 꾸미기 */
+.slide { width:100%; height:100%;}
+.slide .swiper-slide {text-align: center; font-size: 18px; z-index:-10; 
+			  /* Center slide text vertically */
+			  display: -webkit-box;
+			  display: -ms-flexbox;
+			  display: -webkit-flex;
+			  display: flex;
+			  -webkit-box-pack: center;
+			  -ms-flex-pack: center;
+			  -webkit-justify-content: center;
+			  justify-content: center;
+			  -webkit-box-align: center;
+			  -ms-flex-align: center;
+			  -webkit-align-items: center;
+			  align-items: center; }
+.slide  .swiper-slide img{
+	display: block; 
+	width:88%;
+	position: relative;
+	left:-285px;
+	z-index: -1;
+}
+.slide .swiper-slide{
+	left:-240px;
+	top:-150px;
+	height:700px;
+}
+
+/*이동버튼 영역*/
+.slide .swiper-button-next:after,
+.slide .swiper-button-prev:after{display:none;}/* 소스에 들어있는 버튼 삭제 */
+.slide .swiper-button-next,
+.slide .swiper-button-prev{width:150px; height:50px;
+z-index:800;
+}/* 버튼 크기 */
+#banner .slide .swiper-button-prev{
+	background: url(./css_image/banner_prev_btn.png) no-repeat;
+	top:311px; right:118px;
+	z-index:800;
+	transition: all 0.3s;
+	width:152px;
+}/* 버튼 위치, 버튼 이미지 */
+#banner .slide .swiper-button-next{background: url(./css_image/banner_next_btn.png) no-repeat;
+top:187px; right:68px;
+z-index:800;
+transition: all 0.3s;
+width:152px;
+}
+.slide .swiper-button-next:hover{
+	box-shadow: 0px 0px 0 #ccc;
+	transform: translate(2px, 2px);
+z-index:800;
+}
+.slide .swiper-button-prev:hover{
+	box-shadow: 0px 0px 0 #ccc;
+	transform: translate(2px, 2px);
+z-index:800;
+}
+/* 버튼 위치, 버튼 이미지 */
+.slide .swiper-button-prev:hover{}/* 버튼 호버 이미지 */
+.slide .swiper-button-next:hover{}/* 버튼 호버 이미지 */
+
+
+/*블릿버튼 영역*/
+.slide .swiper-pagination-bullet{background:#000; width:20px; height:20px; opacity:0;}/* 블릿버튼 크기, 색상, 투명도 */
+.slide .swiper-pagination-bullet-active{opacity:0; width: 40px; border-radius: 50px;} /* 블릿버튼 페이지 표시날 때 투명도 */
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{bottom:10px;}/* 블릿버튼 위치 */
+
+.sb1, .sb2, .sb3, .sb4, .sb5{
+	top:335px;
+	right:-1130px;
+}

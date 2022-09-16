@@ -1,0 +1,1030 @@
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{margin: 0; padding: 0;}
+body{
+    font-family: 'SUIT';
+    font-size: 14px;
+    flex-direction:column;
+    justify-content: center;
+    min-width: 1420px;
+}
+a{
+    text-decoration: none;
+    color : #3939bf;
+}
+ul{
+    list-style: none;
+}
+
+/*Top(홀로그램 배경)*/
+#toppage{
+    background-size:100%;
+    width:100%;
+    height: 1000px;
+    color : #fff;
+    position: relative;
+}
+
+
+.top_background{
+    position: absolute;
+    width : 100%;
+    height: 100%;
+}
+.toppage_inner{
+    width : 1320px;
+    height : 1000px;
+    margin : auto;
+    position: relative;
+    min-width: 1320px;
+}
+.logo_holo{
+position: absolute;
+top:-30px; left:-70px;
+}
+.space_holo{
+position: absolute;
+top : 150px; right: 150px;
+z-index: 150;
+cursor: url(./images/topvideohoverimg.png),auto;
+}
+.toppage_inner a .space_holo:hover{
+    animation: ani1 7s ease-in-out infinite;
+}
+@keyframes ani1{
+    10%{
+        top : 140px;
+        transform: scale(1,1);
+    }
+    20%{
+        top : 150px;
+     
+    }
+    40%{
+        top : 145px;
+        transform: scale(1.02,1.02);
+    }
+    60%{
+        top : 150px;
+ 
+    }
+    80%{
+        top : 145px;
+        transform: scale(1.02,1.02);
+    }
+    100%{
+        top : 150px;
+        transform: scale(1,1);
+    }
+}
+
+.gloryshine{
+    position: absolute;
+    opacity: 0.7;
+    top:70px; right:150px;
+}
+.gloryshine:hover{
+    transform: scale(1.05,1.05);
+    transition: all 1.5s;
+}
+
+.toppage_inner h1{
+    position: absolute;
+    top : 210px;
+    color : #fff;
+    font-size: 52px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    transition: all 1.5s;
+}
+.toppage_inner h1:hover{
+    background: linear-gradient(to right top, #4b79f9, #ff87df);
+    color: transparent;
+    -webkit-background-clip: text;
+    cursor: default;
+}
+.toppage_inner h2{
+    position: absolute;
+    top : 160px;
+    color : #fff;
+    font-size: 32px;
+    font-weight: 150;
+    letter-spacing : 3px;
+    transition: all 1s;
+    cursor: default;
+}
+.toppage_inner h2:hover{
+    font-size: 34px;
+    background: linear-gradient(to right top, #4b79f9, #ff87df);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.toppage_inner h3{
+    position: absolute;
+    top:40px; right:0;
+    color : #fff;
+    font-size:28px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-align: right;
+    transition: all 1.5s;
+    line-height: 36px;
+}
+.toppage_inner h3:hover{
+    background: linear-gradient(to left bottom, #73d8fd, #be89ff);
+    color: transparent;
+    -webkit-background-clip: text;
+    cursor: default;
+}
+.toppage_inner .pluslg{
+    position: absolute;
+    top:420px; right:0;
+    color : #fff;
+    font-size:28px;
+    font-weight: 200;
+    text-align: right;
+    cursor: default;
+}
+.toppage_inner .pluslg .lg{
+    font-size: 22px;
+    position: absolute;
+    top: 36px; right:-3px;
+}
+.top_inner .pluslg .plusplus{
+    font-size: 24px;
+}
+
+.toppage_inner p{
+    position: absolute;
+    top:340px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+    transition: all 1s;
+    cursor: default;
+}
+.toppage_inner p:hover{
+    background: linear-gradient(to right top, #5a8eff, rgb(255, 49, 111));
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.drop_p_line{
+    position: absolute;
+    top:252px; left: 200px;
+}
+.mini_arrow_down1{
+    position: absolute;
+    display: inline-block;
+    top:346px; left:390px;
+    transition: all 0.7s;
+}
+
+.mini_arrow_down2{
+    transform: rotateX(-180deg);    
+} /*화살표 버튼 클릭하면 */
+/*드랍 버튼 누르면 링크 메뉴 내려옴*/
+
+/*링크 드랍 리스트*/
+.link_drop_list{
+    position: absolute;
+    top: 410px;
+    width : 450px; height: 270px;
+    display: block; /*펼치기, none시 최초 보이지않음*/
+}
+.link_drop_list ul{
+    display: block;
+}
+.link_drop_list ul li{
+    margin-bottom: 25px;
+    display: block;
+}
+.link_drop_list ul li a{
+    color : #fff;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    position: relative;
+    transition: all 0.5s;
+
+}
+/*링크 서브 1*/
+.link_sub1{
+    position: absolute;
+    top:6px; left:100px;
+    width:550px;
+    display: none;
+}
+
+.linkmenu .link_sub1 a{
+    font-size: 14px;
+    font-weight: 200;
+    margin-right: 20px;
+    display: inline-block;
+}
+.linkmenu .link_sub1 img:nth-child(1){
+    position: relative;
+    left:-125px;
+    margin-right: 0px;
+}
+/*링크 서브 2*/
+.link_sub2{
+    position: absolute;
+    top:55px; left:100px;
+    width:550px;
+    display: none;
+
+}
+.linkmenu .link_sub2 a{
+    font-size: 14px;
+    font-weight: 200;
+    margin-right: 20px;
+  
+}
+.linkmenu .link_sub2 img:nth-child(1){
+    position: relative;
+    left:-125px;
+    margin-right: 0px;
+}
+/*링크 서브 3*/
+.link_sub3{
+    position: absolute;
+    top:104px; left:100px;
+    width:550px;
+    display: none;
+
+}
+.linkmenu .link_sub3 a{
+    font-size: 14px;
+    font-weight: 200;
+    margin-right: 20px;
+
+}
+.linkmenu .link_sub3 img:nth-child(1){
+    position: relative;
+    left:-125px;
+    margin-right: 0px;
+}
+/*링크 서브 4*/
+.link_sub4{
+    position: absolute;
+    top:154px; left:150px;
+    width:550px;
+    display: none;
+}
+.linkmenu .link_sub4 a{
+    font-size: 14px;
+    font-weight: 200;
+    margin-right: 20px;
+
+}
+.linkmenu .link_sub4 img:nth-child(1){
+    position: relative;
+    left:-175px;
+    margin-right: 0px;
+}
+/*링크 서브 5*/
+.link_sub5{
+    position: absolute;
+    top:203px; left:160px;
+    width:550px;
+    display: none;
+}
+.linkmenu .link_sub5 a{
+    font-size: 14px;
+    font-weight: 200;
+    margin-right: 20px;
+}
+.linkmenu .link_sub5 img:nth-child(1){
+    position: relative;
+    left:-185px;
+    margin-right: 0px;
+}
+
+/*sns white icon*/
+.sns_white1, .sns_white2, .sns_white3, .sns_white4{
+    position: absolute;
+    opacity: 0.8;
+}
+.sns_white1{
+    right:165px; bottom:200px;
+}
+.sns_white2{
+    right:110px; bottom:200px;
+}
+.sns_white3{
+    right:55px; bottom:200px;
+}
+.sns_white4{
+    right:0px; bottom:200px;
+}
+.sns_white1:hover, .sns_white2:hover, .sns_white3:hover, .sns_white4:hover{
+    opacity:1;
+}
+
+/*탑페이지 바닥 물결 커튼*/
+.wavefilter{
+    position: absolute;
+    width:100%;
+    left:0px; bottom:-50px;
+    min-width: 1320px;
+}
+
+/*page down arrow button*/
+.pagedown_arrow{
+    position: absolute;
+    left:50%; bottom:180px;
+    margin-left:-30px;
+    z-index: 151;
+}
+.pagedown_arrow:hover{
+    cursor: url(./images/sdsc.png),auto;
+}
+/*메뉴 호버 효과*/
+.link_drop_list .linkmenu>li>a:hover{
+    background: linear-gradient(to right top, #5a8eff, rgb(255, 49, 111));
+    color: transparent;
+    -webkit-background-clip: text;
+    
+    font-weight: 600;
+    font-size: 25px;
+}
+.link_sub1>a:hover{
+    color:rgb(255, 59, 114);
+}
+.link_sub2>a:hover{
+    color:rgb(255, 59, 114);
+}
+.link_sub3>a:hover{
+    color:rgb(255, 59, 114);
+}
+.link_sub4>a:hover{
+    color:rgb(255, 59, 114);
+}
+.link_sub5>a:hover{
+    color:rgb(255, 59, 114);
+}
+
+/*nav(메뉴바)*/
+#nav{
+    min-width: 1320px;
+}
+.nav_inner{
+    width : 1320px;
+    height: 250px;
+    margin: 0 auto;
+    position: relative;
+    min-width: 1320px;
+    z-index: 3;
+}
+.waybelogo{
+    width : 15%;
+    display: flex;
+    position: absolute;
+    top:20px; left:50%;
+   margin-left:calc(-198px / 2);
+   opacity: 0;
+} /*비가동중*/
+.waybelogo_change{
+    width : 33%;
+    position: absolute;
+    top:-38px; left:50%;
+    margin-left:calc(-420.59px / 2);
+    display:
+    z-index:155;
+}
+
+.menubar1{
+    position: absolute;
+    left: 0; top: 40px;
+    width : 40%; 
+
+}
+.menubar2{
+    position: absolute;
+    right: 0; top:40px;
+    width : 40%;
+    
+}
+.mypageico{
+    position: absolute;
+    right:-50px; top:-5px;
+    width:6%;
+}
+.mypageico2{
+    position: absolute;
+    right:-50px; top:-5px;
+    width:6%;
+    display: none;
+}
+
+.menu{
+    position: absolute;
+    z-index: 2;
+    padding-top:5px;
+    padding-left: 40px;
+    display: inline-block;
+}
+.menu>li{
+    float : left;
+    position: relative;
+}
+.menu>li>a{
+    display: block;
+    background: linear-gradient(to left top, #5a8eff, #3939bf);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 24px;
+    font-weight: 500;
+    padding-top:0px;
+}
+.menu_nav1{
+    /* margin-left: 28px;
+    margin-right: 80px; */
+    position: absolute;
+    left:20px;
+    padding-bottom:60px;
+}
+.menu_nav1:hover, .menu_nav2:hover,.menu_nav3:hover, .menu_nav4:hover, .menu_nav5:hover{
+    display: block;
+    background: linear-gradient(to right top, rgb(255,49,111), #5a8eff);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.menu_nav2{
+    /* margin-right: 95px; */
+    position: absolute;
+    left:190px;
+    padding-bottom:60px;
+}
+.menu_nav3{
+    /* margin-right: 410px; */
+    position: absolute;
+    left:340px;
+    padding-bottom:60px;
+}
+.menu_nav4{
+    /* margin-right: 165px; */
+    position: absolute;
+    left:810px;
+    padding-bottom:60px;
+}
+.menu_nav5{
+    position: absolute;
+    left:1090px;
+    padding-bottom:60px;
+}
+
+/*Nav_Sub menu*/
+.sub li{
+    background-color: #fff;
+    padding : 15px 15px 24px 15px;
+    border-bottom : 1px solid #fff;
+    margin-top:7px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 5px rgba(57,57,197,0.1);
+    width:130px;
+    height: 12px;
+    
+}
+.sub li a{
+    display: block;
+    text-align : center;
+    background: linear-gradient(to left top, #5a8eff, #3939bf);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 500;
+}
+
+.sub li a:hover{
+    background-color: cornflowerblue;
+    font-weight: bold;
+    background: linear-gradient(to right top, rgb(255,49,111), #5a8eff);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.sub{
+    position: absolute;
+    width:190px;
+    height:220px; /*이 영역 밖을 벗어나면 메뉴가 다시 숨어요*/
+    /*길이마다 다르게 설정해야하지만 일단 통합*/
+    display: none; /*이따 none 해주기*/
+    z-index: 999;
+}
+
+/*서브메뉴간격조정 서브클래스*/
+.subsub1{position: absolute; top:90px;}
+.subsub2{position: absolute; height:200px; top:55px; left:160px;}
+.subsub3{position: absolute; top:90px; left:320px;}
+.subsub4{position: absolute; top:90px; left:800px;}
+.subsub5{ 
+    padding-left: 50px; box-sizing: border-box;
+    position: absolute; top:90px; left:1035px;
+}
+/*서브메뉴 어긋난 배열*/
+.subleft>li:nth-child(2){margin-left:10px;}
+.subleft>li:nth-child(3){margin-left:20px;}
+.subleft>li:nth-child(4){margin-left:30px;}
+.subright>li:nth-child(2){margin-left:-10px;}
+.subright>li:nth-child(3){margin-left:-20px;}
+.subright>li:nth-child(4){margin-left:-30px;}
+
+/*Top(홀로그램 배경)*/
+
+/*Contents1*/
+#contents1{
+    position: relative;
+    height: 2300px;
+    background: url(./images/background_paintbubble.png) no-repeat center top;
+}
+#contents1 .wmb{
+    position: absolute;
+    margin-top : 665px;
+    width:100%;
+    min-width: 1320px;
+}
+.contents1_inner{
+    width : 1320px;
+    height: 2300px;
+    margin: auto;
+    position: relative;
+}
+.bmb{
+    position: absolute;
+    top:235px; right: 100px;
+    z-index: 22;
+}
+.bfw{
+    display: inline-block;
+    position: absolute;
+    z-index: 777;
+    top:230px; right:90px;
+} /* 배너 more view 버튼*/
+
+.next_text{
+    position: absolute;
+    right:90px;
+    font-size: 20px;
+    font-weight: 500;
+    color:#3939bf;
+    cursor: default;
+    
+}
+.next_text:hover{
+    background: linear-gradient(to left top, #5a8eff, #3939bf);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.prev_text{
+    position: absolute;
+    left:55px;
+    font-size: 20px;
+    font-weight: 500;
+    color:#3939bf;
+    cursor: default;
+    /*pointer-events : none;*/
+}
+.prev_text:hover{
+    background: linear-gradient(to left top, #5a8eff, #3939bf);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.mv_text{
+    position: absolute;
+    top:241px; right: 146px;
+    z-index: 23;
+    font-size: 14px;
+    font-weight: 500;
+    background: linear-gradient(to left top, #5a8eff, #3939bf);
+    color: transparent;
+    -webkit-background-clip: text;
+    pointer-events : none;
+}
+.hidebox{
+	width:800px;
+	height:220px;
+	background-color: #fff;
+	position: absolute;
+    border-radius: 0 0px 50px 0;
+    z-index: -1;
+    top:435px;
+}
+.hidebox2{
+	width:80px;
+	height:430px;
+	background-color: #fff;
+	position: absolute;
+    border-radius: 200px 0 0 200px;
+    z-index: -2;
+    top:0; right:0px;
+}
+.contents1_inner>h1{
+    background: linear-gradient(to left top, #5a8eff, #3939bf);
+    color: transparent;
+    -webkit-background-clip: text;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    cursor: default;
+   
+}
+
+.h1line{
+    position: relative;
+    top:88px; left:465px;
+    cursor: default;
+    opacity: 0.5;
+}
+.contents1_inner>h3{
+    background: linear-gradient(to left top, #5a8eff, #3939bf);
+    color: transparent;
+    -webkit-background-clip: text;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    cursor: default;
+}
+.contents1_inner>h4{
+    background: linear-gradient(to left top, #5a8eff, #3939bf);
+    color: transparent;
+    -webkit-background-clip: text;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    cursor: default;
+    margin-bottom: 30px;
+}
+.contents1_inner>h4>span:hover{
+    background: linear-gradient(to right top, rgb(255,49,111), #5a8eff);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.contents1_inner>h5{
+    background: linear-gradient(to left top, #5a8eff, #3939bf);
+    color: transparent;
+    -webkit-background-clip: text;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    position: absolute;
+    top:975px;
+    left:50%; margin-left: -110px;
+    cursor: default;
+}
+.contents1_inner>h5>span{
+    font-weight: 600;
+}
+
+.subtextsp{
+    position: relative;
+    top:250px;
+    left:125px;
+    cursor: default;
+}
+#mid_banner{
+    width:1000px;
+    height:580px;
+    margin: auto;
+    position: relative;
+    margin-top: 170px;
+}
+.mdpick{
+    position: relative;
+    top:0; left:50%;
+    margin-left: -125px;
+    text-align: center;
+}
+#mid_banner>p{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    background: linear-gradient(to left top, #5a8eff, #3939bf);
+    color: transparent;
+    -webkit-background-clip: text;
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+}
+.midframe{
+    position: absolute;
+    top:1197px; left:176px;
+    width:1108px;
+    height:564px;
+    z-index:-2;
+    opacity: 0.5;
+  }
+  #mid_banner h1{
+    position: absolute;
+    top:167px; left:16px;
+    display: block;
+    background: linear-gradient(to left top, #5a8eff, #3939bf);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    z-index:2;
+  }
+  #mid_banner .midh1back{
+    position: absolute;
+    top:163px; left:10px;
+    width:299px; height:35px;
+    z-index:1;
+  }
+  #mid_banner h2{
+    position: absolute;
+    top:165px; right:24px;
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .midpage1 h2{
+    background: linear-gradient(to right, #eb3c4b, #4a4ac3);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  .midpage2 h2{
+    background: linear-gradient(to right, #4ee78c, #4a4ac3);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  .midpage3 h2{
+    background: linear-gradient(to right, #b5ff65, #4a4ac3);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  .midpage4 h2{
+    background: linear-gradient(to right, #c41a2b, #4a4ac3);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  #mid_banner h3{
+    position: absolute;
+    top:135px; left:22px;
+    display: block;
+    color:#3939bf;
+    font-size: 24px;
+    font-weight:500;
+    letter-spacing: 0.5px;
+    opacity: 0.5;
+  }
+  #mid_banner h4{
+    position: absolute;
+    top:195px; right:24px;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  .midpage1 h4{
+    background: linear-gradient(to right, #eb3c4b, #4a4ac3);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  .midpage2 h4{
+    background: linear-gradient(to right, #4ee78c, #4a4ac3);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  .midpage3 h4{
+    background: linear-gradient(to right, #b5ff65, #4a4ac3);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  .midpage4 h4{
+    background: linear-gradient(to right, #c41a2b, #4a4ac3);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+#mid_banner h5{
+    position: absolute;
+    top:110px; left:25px;
+    display: block;
+    color:#3939bf;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+#mid_banner h5 span{font-size: 14px; font-weight: 500;}
+#mid_banner h6{
+    position: absolute;
+    top:240px; right:24px;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: right;
+    line-height: 20px;
+  }
+  .midpage1 h6{
+    background: linear-gradient(to right, #eb3c4b, #4a4ac3);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  .midpage2 h6{
+    background: linear-gradient(to right, #4ee78c, #4a4ac3);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  .midpage3 h6{
+    background: linear-gradient(to right, #b5ff65, #4a4ac3);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  .midpage4 h6{
+    background: linear-gradient(to right, #c41a2b, #4a4ac3);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+#mid_banner h7{
+    position: absolute;
+    top:270px; left:15px;
+    display: block;
+    background: linear-gradient(to left top, #5a8eff, #3939bf);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+}
+#mid_banner h8{
+    position: absolute;
+    top:440px; left:300px;
+    display: block;
+    background: linear-gradient(to left top, #5a8eff, #3939bf);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 0.5px;
+    transform: rotate(-90deg);
+}
+.subtextsp2{
+    position: relative;
+    top:240px;
+    left:50%; margin-left: -146.5px;
+    cursor: default;  
+}
+.subtextsp2+h5{
+    top: 1905px;
+    left:50%; margin-left: -125.23px;
+}
+
+#banner{
+    width:1320px;
+    margin: auto;
+    position: relative;
+    margin-top: 15px;
+ }
+.menubox{
+    width:920px;
+    height:365px;
+    margin: 0 auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    top:350px;
+    scroll-behavior: smooth;
+}
+.menupick1, .menupick2, .menupick3, .menupick4, .menupick5, .menupick6, .menupick7, .menupick8{
+    width:203px;
+    height: 320px;
+    position: absolute;
+    top:0;
+    cursor: pointer;
+}
+.menupick1{left:0;}
+.menupick2{left:234px;}
+.menupick3{left:474px;}
+.menupick4{left:714px;}
+.menupick5{left:950px;}
+.menupick6{left:1192px;}
+.menupick7{left:1430px;}
+.menupick8{left:1670px;}
+.menubox+.menusidelight1{
+    position: relative;
+    left:174px; top:80px;
+}
+.menusidelight1+.menusidelight2{
+    position: relative;
+    left:1066px; top:72px;
+}
+
+.menubox::-webkit-scrollbar {
+    width: 3px; /*스크롤바의 너비*/
+    height: 8px;
+}
+
+.menubox::-webkit-scrollbar-thumb {
+    background: linear-gradient(to left top, #5a8eff, #3939bf); /*스크롤바의 색상*/
+    border-radius: 10px;
+    
+}
+
+.menubox::-webkit-scrollbar-track {
+    background-color: #cbcfff; /*스크롤바 트랙 색상*/
+    border-radius: 10px;
+}
+
+.leftmove{
+    background-color: rgba(0,0,0,0);
+    border:1px solid rgba(0,0,0,0);
+    background: linear-gradient(to left top, #5a8eff, #3939bf);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 500;
+    font-size: 32px;
+    position: relative;
+    top:323px; left:60px;
+}
+.rightmove{
+    background-color: rgba(0,0,0,0);
+    border:1px solid rgba(0,0,0,0);
+    background: linear-gradient(to left top, #5a8eff, #3939bf);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 500;
+    font-size: 32px;
+    position: relative;
+    top:323px; left:1070px;
+}
+.con1emv{
+    position: relative;
+    left:460px; top:460px;
+    z-index: 999;
+}
+/*Contents1*/
+
+/*Contents2*/
+#contents2{
+    height:2615px;
+    position: relative;
+    background: url(./images/contents2_background.png) no-repeat center top;
+    margin-top: 140px;
+}
+.contents2_inner{
+    width : 1320px;
+    height: 2615px;
+    margin: auto;
+    position: relative;
+}
+.valueation{
+    position: absolute;
+    top:1000px; left:90px;
+}
+.glowframe{
+    position: absolute;
+    top:1242px; left:86px;
+}
+.valuationbox{
+    width:940px;
+    height: 682px;
+    position: absolute;
+    top:1320px; left:190px;
+    background-color:;
+}
+.valuationbox1 img{
+    width : 940px;
+    height: 682px;
+    border-radius: 100px;
+}
+.blackbox{
+    width:940px;
+    height: 682px;
+    border-radius: 100px;
+    background-color: #000;
+    opacity: 0.7;
+    z-index: 999;
+}
+/*Contents2*/
+
+
+/*특수 설정*/
+
+/*홀로그램 페이지에서 다운버튼 클릭시 도착할 y좌표*/
+.scroll_point{
+    width : 100px; height: 100px;
+    margin: auto;
+    background-color: aliceblue; opacity: 0;
+    display: flex;
+    justify-content: center;
+    position: relative; top:0;

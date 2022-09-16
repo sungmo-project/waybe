@@ -1,0 +1,16 @@
+canvas {
+    position: absolute;
+    width: 100vw;
+    height: 1400px;
+    top:-735px;
+    z-index: ;
+  }
+  
+  .blur {
+    position: absolute;
+    width: 100vw;
+    height: 650px;
+    top: 0;
+    backdrop-filter: blur(3px);
+    z-index: 2;
+  } /*비활성화*/
